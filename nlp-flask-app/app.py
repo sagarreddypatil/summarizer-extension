@@ -13,11 +13,13 @@ def method_name():
 
 @app.route("/summarize", methods=["POST"])
 def summarize():
-    text = request.get_json()["text"]
+    request_json = request.get_json()
 
     start_time = time.time()
-    summary = model.summarize(text)
+    summary = model.summarize(**request_json)
     time_taken = time.time() - start_time
+
+    text = request_json["text"]
     reduction = 1 - len(summary) / len(text)
 
     return (
@@ -27,4 +29,4 @@ def summarize():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0")
