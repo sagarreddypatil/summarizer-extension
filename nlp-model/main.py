@@ -14,7 +14,6 @@ print(f"Model loaded in {round(time.time() - model_load_start, 2)}s")
 inputs = tokenizer.encode(
     "summarize: " + sample_text, return_tensors="pt", max_length=512
 )
-print(f"Original: {sample_text}")
 
 summarize_start = time.time()
 outputs = model.generate(
@@ -26,8 +25,8 @@ outputs = model.generate(
     early_stopping=True,
 )
 output_text = tokenizer.decode(outputs[0].tolist())
+reduction = 1 - len(output_text) / len(sample_text)
 print(
-    f"---------------------------------Summarization took {round(time.time() - summarize_start, 2)}s---------------------------------"
+    f"---------------------------------Summarization took {round(time.time() - summarize_start, 2)}s at {round(reduction, 4) * 100}% reduction---------------------------------"
 )
 print(output_text)
-print(len(output_text) / len(sample_text) * 100)
