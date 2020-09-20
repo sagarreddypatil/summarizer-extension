@@ -1,16 +1,41 @@
+@import url("https://use.typekit.net/qic4ixk.css");
+
 body {
-  width: 700px;
-  height: 2000;
+  width: 500px;
+  height: 500px;
+  margin: 0;
 }
 
-.title {
-  display: flex;
-  justify-content: center;
+#header {
+  background-color: #d1495b;
+  padding: 15px;
 }
 
-.subheading {
-  display: flex;
-  justify-content: center;
+#app-name {
+  margin: 0;
+  color: white;
+}
+
+#content {
+  padding: 0px 15px 15px 15px;
+}
+
+#title {
+  font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+#summary {
+  font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+  text-align: left;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+#url {
+  text-align: center;
   border: 0.5px solid #000;
   padding: 10px;
 }
