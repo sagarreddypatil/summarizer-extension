@@ -18,10 +18,10 @@ inputs = tokenizer.encode(
 summarize_start = time.time()
 outputs = model.generate(
     inputs,
-    max_length=100,
-    min_length=30,
-    length_penalty=1,
-    num_beams=10,
+    max_length=250,
+    min_length=100,
+    length_penalty=1.0,
+    num_beams=3,
     early_stopping=True,
 )
 output_text = tokenizer.decode(outputs[0].tolist())
