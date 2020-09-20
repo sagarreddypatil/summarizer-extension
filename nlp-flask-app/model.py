@@ -30,6 +30,11 @@ class SummarizationModel:
         return summarized_text
 
 
+def download_model():
+    model = SummarizationModel()
+    del model
+
+
 if __name__ == "__main__":
     import time
 
