@@ -1,1 +1,1 @@
-python -m transformers.convert_graph_to_onnx --pipeline text-generation --model t5-small --tokenizer t5-small --framework pt exported-model/t1-small.onnx
+python -m transformers.convert_graph_to_onnx --pipeline feature-extraction --model facebook/bart-large-cnn --framework pt --quantize --opset 13 exported-model/bart-large-cnn.onnx
