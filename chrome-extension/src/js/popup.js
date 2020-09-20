@@ -1,8 +1,9 @@
 import "../css/popup.css";
-import { getCurrentUrl } from "./popup/utils";
+import { getCurrentUrl, getSummary } from "./popup/utils";
 
 async function setup() {
-  addUrl.textContent = await getCurrentUrl();
+  url.textContent = await getCurrentUrl();
+  summary.textContent = await getSummary(url.textContent);
 }
 
 setup();
