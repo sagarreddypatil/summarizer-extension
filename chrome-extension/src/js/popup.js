@@ -13,4 +13,5 @@ function setup() {
     addUrl.textContent = "Url: " + tabs[0].url;
   }
 }
+
 setup();

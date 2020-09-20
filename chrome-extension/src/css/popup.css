@@ -6,9 +6,10 @@ body {
 .title {
   display: flex;
   justify-content: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
-.subheading {
+.footer {
   display: flex;
   justify-content: center;
   border: 0.5px solid #000;
