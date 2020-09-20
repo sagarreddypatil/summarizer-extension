@@ -10,7 +10,7 @@ function setup() {
     console.log("Hello from Rithvik");
     console.log(tabs);
     var val = tabs[0].url;
-    Url.textContent = tabs[0].url;
+    addUrl.textContent = "Url: " + tabs[0].url;
   }
 }
 setup();
