@@ -1,17 +1,18 @@
+@import url("https://use.typekit.net/qic4ixk.css");
+
 body {
-  width: 700px;
-  height: 2000;
+  width: 500px;
+  height: 500px;
 }
 
 .title {
-  display: flex;
-  justify-content: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: adobe-garamond-pro, "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 30px;
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
+  text-align: center;
   border: 0.5px solid #000;
   padding: 10px;
 }
