@@ -6,13 +6,18 @@ body {
   margin: 0;
 }
 
+#header {
+  background-color: #d1495b;
+  padding: 15px;
+}
+
 #app-name {
   margin: 0;
   color: white;
 }
 
 #content {
-  padding: 0px 10px 10px 10px;
+  padding: 0px 15px 15px 15px;
 }
 
 #title {
