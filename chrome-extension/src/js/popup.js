@@ -1,15 +1,8 @@
 import "../css/popup.css";
+import { getCurrentUrl } from "./popup/utils";
 
-function getUrl() {
-  chrome.tabs.query(
-    {
-      active: true,
-      currentWindow: true,
-    },
-    (tabs) => {
-      addUrl.textContent = tabs[0].url;
-    }
-  );
+async function setup() {
+  addUrl.textContent = await getCurrentUrl();
 }
 
-getUrl();
+setup();

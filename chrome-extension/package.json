@@ -21,6 +21,7 @@
     "webpack-cli": "3.3.10"
   },
   "dependencies": {
-    "@postlight/mercury-parser": "^2.2.0"
+    "@postlight/mercury-parser": "^2.2.0",
+    "chrome-extension-async": "^3.4.1"
   }
 }
