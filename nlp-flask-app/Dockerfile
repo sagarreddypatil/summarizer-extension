@@ -5,7 +5,7 @@ RUN pip install transformers Flask gunicorn
 
 COPY . /app
 WORKDIR /app
-
 RUN python -c "from model import download_model; download_model()"
 
-ENTRYPOINT [ "gunicorn", "--worker-temp-dir /dev/shm", "app:app" ]
+ENTRYPOINT [ "python" ]
+CMD [ "app.py" ]

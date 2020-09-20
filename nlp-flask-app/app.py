@@ -6,6 +6,11 @@ app = Flask(__name__)
 model = SummarizationModel()
 
 
+@app.route("/", methods=["GET"])
+def method_name():
+    return "Hello World!"
+
+
 @app.route("/summarize", methods=["POST"])
 def summarize():
     text = request.get_json()["text"]
