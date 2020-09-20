@@ -3,5 +3,5 @@ version: "2"
 services:
   summarizer:
     build: .
-    ports: ["5000:80"]
+    ports: ["5000:8000"]
     restart: always
