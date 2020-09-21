@@ -1,23 +1,8 @@
-import "../css/popup.css";
-import { getCurrentUrl, getSummary } from "./popup/utils";
-
-async function setup() {}
-
-chrome.runtime.onMessage.addListener(function (request, sender) {
-  if (request.action == "getSource") {
-    getCurrentUrl().then((r) => {
-      url.textContent = r;
-      getSummary(r, request.source);
-    });
-    // summary.textContent = await getSummary(url.textContent, request.source);
-  }
-});
-
-const code = `
 // @author Rob W <http://stackoverflow.com/users/938089/rob-w>
 // Demo: var serialized_html = DOMtoString(document);
+
 function DOMtoString(document_root) {
-   var html = "",
+  var html = "",
     node = document_root.firstChild;
   while (node) {
     switch (node.nodeType) {
@@ -41,7 +26,7 @@ function DOMtoString(document_root) {
           (node.publicId ? ' PUBLIC "' + node.publicId + '"' : "") +
           (!node.publicId && node.systemId ? " SYSTEM" : "") +
           (node.systemId ? ' "' + node.systemId + '"' : "") +
-          ">\\n";
+          ">\n";
         break;
     }
     node = node.nextSibling;
@@ -53,27 +38,3 @@ chrome.runtime.sendMessage({
   action: "getSource",
   source: DOMtoString(document),
 });
-`;
-
-function onWindowLoad() {
-  var message = document.querySelector("#summary");
-
-  chrome.tabs.executeScript(
-    null,
-    {
-      code,
-    },
-    function () {
-      // If you try and inject into an extensions page or the webstore/NTP you'll get an error
-      if (chrome.runtime.lastError) {
-        message.innerText =
-          "There was an error injecting script : \n" +
-          chrome.runtime.lastError.message;
-      }
-    }
-  );
-}
-
-window.onload = onWindowLoad;
-
-setup();
