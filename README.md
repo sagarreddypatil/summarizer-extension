@@ -10,7 +10,7 @@ Making sure you have the latest Node.js version available, run the following com
 1. `cd chrome-extension`
 2. `npm install`
 3. `npm run build`. This should generate a new `build` folder in the `chrome-extension` directory.
-4. Next, open `chrome://extensions` in your browser and click the "Load Unpacked" button.
+4. Next, open `chrome://extensions` in your browser and click the "Load Unpacked" button. You may need to toggle developer mode on the top right of the page.
 
   <img width="533" alt="Untitled" src="https://user-images.githubusercontent.com/30810402/93785055-a6155380-fbfb-11ea-9e9e-a6bb592c3b30.png">
 
