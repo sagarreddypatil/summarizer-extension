@@ -21,3 +21,7 @@ export async function getSummary(url) {
   laoreet. Suspendisse potenti. In vitae malesuada leo. Nullam et est
   ipsum.`;
 }
+
+export function getTitle(url) {
+  return "Trump vows to appoint a woman to Supreme Court as vacancy re-energizes his political prospects";
+}
