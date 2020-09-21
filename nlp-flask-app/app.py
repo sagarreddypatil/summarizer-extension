@@ -13,10 +13,10 @@ def method_name():
 
 @app.route("/summarize", methods=["POST"])
 def summarize():
-    request_json = request.get_json()
+    request_json = request.get_json(force=True)
 
     start_time = time.time()
-    summary = model.summarize(**request_json)
+    summary = model.summarize(text=request_json["text"])
     time_taken = time.time() - start_time
 
     text = request_json["text"]

@@ -11,7 +11,7 @@ export async function getSummary(url, htmlCode) {
     const parsed = result.content;
     const resultFetch = fetch("http://home.sagarpatil.me:5000/summarize", {
       method: "POST",
-      body: JSON.stringify({ num_beams: 5, text: parsed }),
+      body: JSON.stringify({ text: parsed }),
     })
       .then((response) => response.json())
       .then((d) => (summary.textContent = d.summary))
