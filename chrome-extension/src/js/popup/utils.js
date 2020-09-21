@@ -8,6 +8,7 @@ export async function getCurrentUrl() {
 
 export async function getSummary(url, htmlCode) {
   Mercury.parse(url, { html: htmlCode, contentType: "text" }).then((result) => {
+    title.textContent = result.title;
     const parsed = result.content;
     const resultFetch = fetch("http://home.sagarpatil.me:5000/summarize", {
       method: "POST",
