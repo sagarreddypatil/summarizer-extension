@@ -1,5 +1,5 @@
 import "../css/popup.css";
-import { getCurrentUrl, getSummary } from "./popup/utils";
+import { getCurrentUrl, getSummary, getTitle } from "./popup/utils";
 
 async function setup() {}
 
