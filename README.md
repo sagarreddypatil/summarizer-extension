@@ -25,6 +25,7 @@ Making sure you have the latest Node.js version available, run the following com
 
 ### Backend Microservice
 
+1. Make sure you have Docker installed.
 1. Clone the repository
 1. `cd nlp-flask-app`
 1. `docker-compose -f docker-compose.dev.yml up && docker-compose -f docker-compose.dev.yml up`
